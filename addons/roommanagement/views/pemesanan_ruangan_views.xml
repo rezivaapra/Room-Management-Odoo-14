@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="roommanagement_pemesananruangan_tree" model="ir.ui.view">
+        <field name="name">roommanagement.pemesananruangan.tree</field>
+        <field name="model">roommanagement.pemesananruangan</field>
+        <field name="arch" type="xml">
+            <tree string="Pemesanan Ruangan">
+                <field name="name" />
+                <field name="status_pemesanan" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="roommanagement_pemesananruangan_form" model="ir.ui.view">
+        <field name="name">roommanagement.pemesananruangan.form</field>
+        <field name="model">roommanagement.pemesananruangan</field>
+        <field name="arch" type="xml">
+            <form string="Pemesanan Ruangan">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="tipe_pemesanan" />
+                        <field name="ruangan_id" />
+                        <field name="nama_pemesanan" />
+                        <field name="tanggal_pemesanan" />
+                        <field name="status_pemesanan" readonly="1" />
+                        <field name="catatan_pemesanan" />
+                    </group>
+                    <footer>
+                        <button name="action_proses_pemesanan"
+                                string="Proses Pemesanan"
+                                type="object"
+                                class="btn-primary"
+                                attrs="{'invisible': [('status_pemesanan', 'in', ['done', 'on_going'])]}"/>
+                        <button name="action_selesaikan_pemesanan"
+                                string="Selesaikan Pemesanan"
+                                type="object"
+                                class="btn-primary"
+                                attrs="{'invisible': [('status_pemesanan', 'in', ['draft', 'done'])]}"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="roommanagement_pemesananruangan_action" model="ir.actions.act_window">
+        <field name="name">Pemesanan Ruangan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">roommanagement.pemesananruangan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

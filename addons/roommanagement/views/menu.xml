@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem 
+        id="roommanagement_menu_root"
+        name="Room Management"
+        sequence="10"
+    />
+
+    <menuitem 
+        id="roommanagement_masterruangan_menu_categ"
+        name="Master Ruangan"
+        parent="roommanagement_menu_root"
+        action="roommanagement_masterruangan_action"
+        sequence="10"
+    />
+
+    <menuitem 
+        id="roommanagement_pemesananruangan_menu_categ"
+        name="Pemesanan Ruangan"
+        parent="roommanagement_menu_root"
+        action="roommanagement_pemesananruangan_action"
+        sequence="11"
+    />
+</odoo>

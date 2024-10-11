@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_roommanagement_masterruangan,roommanagement.masterruangan,model_roommanagement_masterruangan,,1,1,1,1
+access_roommanagement_pemesananruangan,roommanagement.pemesananruangan,model_roommanagement_pemesananruangan,,1,1,1,1

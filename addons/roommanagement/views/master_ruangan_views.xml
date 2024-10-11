@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="roommanagement_masterruangan_tree" model="ir.ui.view">
+        <field name="name">roommanagement.masterruangan.tree</field>
+        <field name="model">roommanagement.masterruangan</field>
+        <field name="arch" type="xml">
+            <tree string="Master Ruangan">
+                <field name="name" />
+                <field name="tipe_ruangan" />
+                <field name="lokasi_ruangan" />
+                <field name="kapasitas_ruangan" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="roommanagement_masterruangan_form" model="ir.ui.view">
+        <field name="name">roommanagement.masterruangan.form</field>
+        <field name="model">roommanagement.masterruangan</field>
+        <field name="arch" type="xml">
+            <form string="Master Ruangan">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="tipe_ruangan" />
+                        <field name="lokasi_ruangan" />
+                        <field name="foto_ruangan" widget="image" />
+                        <field name="kapasitas_ruangan" />
+                        <field name="keterangan" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="roommanagement_masterruangan_action" model="ir.actions.act_window">
+        <field name="name">Master Ruangan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">roommanagement.masterruangan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
