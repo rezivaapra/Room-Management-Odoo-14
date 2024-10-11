@@ -56,6 +56,7 @@ Sebelum memulai instalasi, pastikan Anda memiliki:
 Ganti C:\path\to\your\addons dengan jalur ke direktori addons Anda.
 ## Menjalankan Odoo
 Jalankan Odoo dengan perintah berikut di Command Prompt:
-    ```
-    python odoo-bin -c config.conf
+   ```
+   python odoo-bin -c config.conf
+   ```
 Akses Odoo melalui browser di http://localhost:port
